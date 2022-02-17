@@ -74,14 +74,12 @@ Die unterschiedlichen Werte haben den Ursprung, dass die ADC-Werte sich in x-Ric
 \label{ab:genau}
 Bei dieser Untersuchung wurden zwei separate Messungen durchführen.
 Im ersten Durchlauf wurden die Werte mit dem Medianfilter verarbeitet, bevor sie ausgegeben wurden.
-Im zweiten Durchlauf wurden die direkten und ungefilterte Werte ausgegeben.
+Im zweiten Durchlauf wurden die ungefilterte Werte ausgegeben.
 In den \cref{fig:filtered} und \cref{fig:unfiltered} sind die Messdaten der x- und y-Komponenten aufgetragen (siehe Seite \cref{fig:filtered}).
 
 Die Auswertung der Messdaten ist in \cref{tab:genaufilter} und \cref{tab:genauunfilter} zu finden.
 Bei der Auswertung ist zu beachten, dass es um zwei separate Messreihen handelt.
 Daher hat auch die ungefilterte Messreihe eine Standardabweichung und Varianz von null, im Vergleich zur gefilterten Messreihe.
-Im Normalbetrieb ist der Medianfilter im Programm aktiv, daher haben die Werte der gefilterten Messreihe eine höhere Relevanz.
-Die Genauigkeit des Touchscreen in beiden Messreihen ist kleiner als die Auflösung, was auf ein akkurat arbeitenden Touchscreen schließen lässt.
 \begin{table}[ht!]
     \caption{Auswertung der gefilterten Messdaten }
     \begin{center}
@@ -153,18 +151,19 @@ Die jeweiligen Komponenten wurde anschließend jeweils über die physikalische S
 Die Messwerte wurden mittels einer linearen Anpassung gefittet.
 
 Das \(\chi^2\) gibt Auskunft darüber in welchem Maß Werte miteinander sich verändern.
-Je kleiner dieser Wert ist, desto eher stimmt die Linearität überein.
-Bei der linearen Anpassung in x-Richtung wurde ein \(\chi^2\) von \(0,294\) ermittelt.
+Je kleiner dieser Wert ist, desto eher stehen die Werte in einem Zusammenhang miteinander.
+Bei dem Fit in x-Richtung wurde ein \(\chi^2\) von \(0,294\) ermittelt.
 Für die Linearität in y-Richtung wurde ein \(\chi^2\) von \(5,946\) ermittelt.
 
-Bei der Untersuchung, der Linearität in y-Richtung, gibt es bei Abstand 40 mm ein Messpunkt der von der Messpunktewolke und der dazugehörigen linearen Anpassung abweicht. Dieser Messpunkt führt zu diesem größeren \(\chi^2\) als im Vergleich zur Messreihe  in x-Richtung.
+Bei der Untersuchung, der Linearität in y-Richtung, gibt es bei Abstand 40 mm ein Messpunkt der eine größere Abweichung von der dazugehörigen linearen Anpassung abweicht, als die andren Messpunkte.
+Dieser eine Messpunkt führt zu dem Unterschied von \(\chi^2\) in x-Richtung und y-Richtung.
 
 Um abschließend eine Aussage treffen zu können, ob diese Werte im Wertebereich des Datenblatts sind (\cref{ds:touch}, \cpageref{ds:touch}), muss der Grenzwert der Chi-Quadrat-Verteilung mit den Werten der linearen Anpassung verglichen werden.
 Im Datenblatt wird eine Linearität von \SI{1,5}{\%} garantiert.
-In der Wertetabelle von \cite{papula} gibt es nur Werte für \SI{1}{\%} oder \SI{2,5}{\%}.
+In der Wertetabelle von \cite{papula} gibt es Werte für \SI{1}{\%} oder \SI{2,5}{\%}.
 Der gelistete Wert für zwei Freiheitsgrade und für \SI{1}{\%} liegt bei 7,88.
 Sowohl das \(\chi^2\) in x-Richtung wie auch in y-Richtung ist kleiner diesem Werte.
-Dies hat zur Folge, dass dieser Touchscreen eine Linearität von unter \SI{1}{\%} aufweist.
+Daraus folgt, dass dieser Touchscreen eine Linearität von unter \SI{1}{\%} aufweist.
 % \begin{figure}
 %     \begin{minipage}{0.49\linewidth}
 %         \centering
@@ -189,9 +188,9 @@ Dies hat zur Folge, dass dieser Touchscreen eine Linearität von unter \SI{1}{\%
 \begin{figure}[ht!]
     \centering
     \includesvg[width=\linewidth]{fig/plots/8_linearitaet_x}
-    \caption{}
+    \caption{Messung der Linearität in x-Richtung}
     \label{fig:xlinear}
     \includesvg[width=\linewidth]{fig/plots/8_linearitaet_y}
-    \caption{}
+    \caption{Messung der Linearität in x-Richtung}
     \label{fig:ylinear}
 \end{figure}
